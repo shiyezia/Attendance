@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="146dp"
+        android:layout_marginTop="-5dp"
+        android:src="@drawable/login_picture"
+        />
+
+    <com.example.attendance.ClearEditText
+        app:layout_constraintTop_toBottomOf="@+id/image"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/username"
+        android:layout_marginTop="30dp"
+        android:layout_width="fill_parent"
+        android:drawableLeft="@drawable/icon_user"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:singleLine="true"
+        android:drawableRight="@drawable/delete_selector"
+        android:hint="输入用户名"
+        android:background="@drawable/edittext_shape"
+        android:layout_height="48dp" >
+
+    </com.example.attendance.ClearEditText>
+
+    <com.example.attendance.ClearEditText
+        app:layout_constraintTop_toBottomOf="@+id/username"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/password"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:layout_marginTop="10dip"
+        android:drawableLeft="@drawable/account_icon"
+        android:hint="输入密码"
+        android:singleLine="true"
+        android:inputType="textPassword"
+        android:background="@drawable/edittext_shape"
+        android:drawableRight="@drawable/delete_selector"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        >
+    </com.example.attendance.ClearEditText>
+    <Button
+        app:layout_constraintTop_toBottomOf="@id/password"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/register"
+        android:id="@+id/login"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape"
+        android:text="登陆"
+        />
+    <Button
+        app:layout_constraintLeft_toRightOf="@id/login"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/password"
+        android:id="@+id/register"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape"
+        android:text="注册"
+        />
+
+</android.support.constraint.ConstraintLayout>
